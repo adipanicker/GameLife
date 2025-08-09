@@ -3,12 +3,24 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import taskRoutes from "./routes/tasks.js";
-
+import session from "express-session";
+import passport from "passport";
+import "./config/passport.js";
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/tasks", taskRoutes);
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get("/", (req, res) => {
   res.send("GameLife Server is Running! with Nodemmmmmon");

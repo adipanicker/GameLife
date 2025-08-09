@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AddTask from "../components/AddTask";
 import TaskList from "../components/TaskList";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [tasks, setTasks] = useState([]);
@@ -42,7 +43,16 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-3xl font-bold mb-6">GameLife 🎮</h1>
+      <header className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold">GameLife 🎮</h1>
+        <Link
+          to="/login"
+          className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded"
+        >
+          Sign In
+        </Link>
+      </header>
+
       <AddTask newTask={newTask} setNewTask={setNewTask} addTask={addTask} />
       <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
     </div>
