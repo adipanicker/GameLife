@@ -9,7 +9,7 @@ const Login = () => {
           Welcome to GameLife 🎮
         </h1>
         <p className="text-gray-300 text-center mb-8">
-          Sign in to track your tasks, earn points, and climb the leaderboard!!
+          Sign in to track your tasks, earn points, and climb the leaderboard!
         </p>
 
         {/* Google Sign-In Button */}
