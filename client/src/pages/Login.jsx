@@ -30,7 +30,7 @@ const Login = () => {
             to="/"
             className="text-purple-400 hover:text-purple-300 underline"
           >
-            Continue as Guest? (Limited Features)
+            Continue as Guest (Limited Features)
           </Link>
         </div>
       </div>
