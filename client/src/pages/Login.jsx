@@ -13,7 +13,7 @@ const Login = () => {
         </p>
 
         {/* Google Sign-In Button */}
-        <div className="mb-6">
+        <div className="mb-7">
           <GoogleLoginButton />
         </div>
 
